@@ -217,6 +217,7 @@ div.fp-controlArrow.fp-next{
 
 @media(min-width: 1024px){
 
+    
 
     .projects__slides, .projects .fp-tableCell, .projects .fp-scroller{
       display: grid;
@@ -226,6 +227,7 @@ div.fp-controlArrow.fp-next{
     }
 
     .projects__title{
+      margin-top: 100px;
       text-align: left;
       grid-column: 1 / -1;
       margin-bottom: 15px;

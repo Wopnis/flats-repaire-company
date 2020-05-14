@@ -10,13 +10,23 @@ $(document).ready(function() {
 		}
 	});
 
-	$(document).on('click', '.projects__mini a', changeImg);
 
+	$(document).on('click', '.projects__mini a', changeImg);
 	function changeImg(event){
 		event.preventDefault();
 		$('.projects__big img').attr('src', $(this).attr('data-src'));
 	}
+	
+
+	$('.header__work').on('click', function(elem){
+		elem.preventDefault();
+		let projectsOffSet = $('.projects').offset().top;
+		$('html,body').animate({
+			scrollTop: projectsOffSet
+		}, 1000);
+	});
 });
+
 
 
 
