@@ -381,6 +381,83 @@
 				</ul>
 			</div>
 		</section>
+		<section class="calculator section">
+			<div class="calculator__wrap wrap">
+				<h2 class="calculator__title">Расчитайте стоимость ремонта</h2>
+				<picture>
+					<source media="(min-width: 1024px)"
+							srcset="img/calculator-desktop.png"
+					>
+					<img 
+					class="calculator__img"
+					src="img/calculator.png" 
+					alt="calculator-picture"
+					>
+				</picture>
+				<form class="calculator__form calc" action="#">
+					<fieldset class="calc__group">
+						<legend class="calc__title">Тип здания:</legend>
+						<div class="calc__wrap">
+							<div class="calc__radio">
+								<input type="radio" name="building" value="new" checked id="new">
+								<label for="new">Новостройка</label>
+							</div>
+							<div class="calc__radio">
+								<input type="radio" name="building" value="old" id="old">
+								<label for="old">Вторичное жилье</label>
+							</div>
+						</div>
+					</fieldset>
+					<fieldset class="calc__group">
+						<legend class="calc__title">Местонахождение:</legend>
+						<div class="calc__wrap">
+							<div class="calc__radio">
+								<input type="radio" name="location" value="minsk" checked id="minsk">
+								<label for="minsk">Минск</label>
+							</div>
+							<div class="calc__radio">
+								<input type="radio" name="location" value="region" id="region">
+								<label for="region">Минская область</label>
+							</div>
+						</div>
+					</fieldset>
+					<fieldset class="calc__group">
+						<legend class="calc__title">Тип ремонта:</legend>
+						<div class="calc__wrap">
+							<div class="calc__radio">
+								<input type="radio" name="remont" value="cosmetic" checked id="cosmetic">
+								<label for="cosmetic">Косметический</label>
+							</div>
+							<div class="calc__radio">
+								<input type="radio" name="remont" value="designer" id="designer">
+								<label for="designer">Дизайнерский</label>
+							</div>
+							<div class="calc__radio">
+								<input type="radio" name="remont" value="capital" id="capital">
+								<label for="capital">Капитальный</label>
+							</div>
+						</div>
+					</fieldset>
+					<fieldset class="calc__group">
+						<legend class="calc__title">Площадь ремонта м2:</legend>
+						<div class="calc__wrap">
+							<div class="calc__input">
+								<input class="calc__square" aria-label="Площадь помещения" type="number" name="square" min="35" max="1000" placeholder="45">
+							</div>
+							<div class="calc__range">
+								<output>10</output>
+								<input aria-label="Площадь помещения" type="range" name="square" min="1" max="1000" step="1" value="10">
+								<label for="square">Площадь м2</label>
+							</div>
+						</div>
+					</fieldset>
+					<div class="calc__wrap">
+						<button class="calc__btn">Расчитать</button>
+						<p class="calc__result">Результат : <span>35 000 </span> руб.</p>
+					</div>
+				</form>
+			</div>
+		</section>
 	</div>
 </div>
 <script src="js/all.min.js"></script>
