@@ -10,24 +10,30 @@ $(document).ready(function() {
 		}
 	});
 
+	new fullpage('.fullpage', {
+		anchors: ['page1', 'page2', 'page3', 'page4'],
+	  });
+	$(document).on('click', '#moveTo', function(){
+		console.log('object');
+	fullpage_api.moveTo(2);
+	});
+
 
 	$(document).on('click', '.projects__mini a', changeImg);
+	$(document).on('input', '.calc', changeInput);
+
 	function changeImg(event){
 		event.preventDefault();
 		$('.projects__big img').attr('src', $(this).attr('data-src'));
 	}
 	
+	function changeInput(event){
+		event.preventDefault();
+		// console.log($(this));
+		$(this).find('.calc__range output').val($(this).find('.calc__range input').val());
+	}
 
-	$('.header__work').on('click', function(elem){
-		elem.preventDefault();
-		let projectsOffSet = $('.projects').offset().top;
-		$('html,body').animate({
-			scrollTop: projectsOffSet
-		}, 1000);
-	});
+
+
 });
-
-
-
-
 
