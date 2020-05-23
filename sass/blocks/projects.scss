@@ -4,7 +4,7 @@
 }
 
 .projects__wrap{
-  padding-top: 50px;
+  padding-top: 60px;
   padding-bottom: 30px;
   height: 100%;
   position: relative;
@@ -217,6 +217,10 @@ div.fp-controlArrow.fp-next{
 
 @media(min-width: 1024px){
 
+    .projects__task, .projects__result {
+      margin-right: 60px;
+    }
+
     .projects__slides, .projects .fp-tableCell, .projects .fp-scroller{
       display: grid;
       grid-template-columns: repeat(6, 1fr);
@@ -227,14 +231,14 @@ div.fp-controlArrow.fp-next{
     .projects__title{
       text-align: left;
       grid-column: 1 / -1;
-      margin-bottom: 15px;
+      margin-bottom: 0;
     }
 
     .projects__example{
       text-align: left;
       grid-column: 1 / -1;
-      margin-bottom: 15px;
-      margin-top: 10px;
+      margin-bottom: 5px;
+      margin-top: 0;
     }
 
     .fp-scrollable{
@@ -262,6 +266,7 @@ div.fp-controlArrow.fp-next{
       border-top: none;
       border-bottom: none;
       border-left: 1px solid #454545;
+      margin-top: 10px;
     }
 
     .projects__item{
