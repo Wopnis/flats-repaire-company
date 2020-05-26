@@ -26,6 +26,8 @@ $(document).ready(function() {
 	$(document).on('click', '.scroll-down', function() {
 		fullpage_api.moveSectionDown();
 	});
+	$(document).on('click', '.fixed__hamburger', openMenu);
+	$(document).on('click', '.main-menu__close', closeMenu);
 
 	function changeImg(event){
 		event.preventDefault();
@@ -38,7 +40,13 @@ $(document).ready(function() {
 		$(this).find('.calc__range output').val($(this).find('.calc__range input').val());
 	}
 
+	function openMenu(event){
+		$('.main-menu').addClass('main-menu--active');
+	}
 
+	function closeMenu(event){
+		$('.main-menu').removeClass('main-menu--active');
+	}
 
 });
 
